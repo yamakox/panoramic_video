@@ -17,7 +17,7 @@ class FFmpegFrameWriter:
 			.input('pipe:', format='rawvideo', pix_fmt='rgb24', r=fps, s=f'{video_width}x{video_height}')
 			.output(video_file_name, pix_fmt='yuv420p', video_bitrate=bitrate)
 			.overwrite_output()
-			.run_async(pipe_stdin=True, pipe_stdout=self.stdout, pipe_stderr=self.stdout)
+			.run_async(pipe_stdin=True, pipe_stdout=True, pipe_stderr=True)
 		)
 		if self.stdout:
 			fl =  fcntl.fcntl(self.process.stderr, fcntl.F_GETFL)

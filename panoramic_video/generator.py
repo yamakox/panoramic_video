@@ -3,7 +3,7 @@
 from .frame_writer import *
 
 def generate(image_file_name, video_file_name,
-			 crop=None, border=4,
+			 crop=None, border=5,
 			 seconds=60, fps=30, size=(1280, 720), bitrate='10240k', stdout=False):
 	image = Image.open(image_file_name)
 	if crop:
