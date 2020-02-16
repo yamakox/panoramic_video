@@ -5,7 +5,7 @@ The video generator from panorama photograph image
 ## Install
 
 ```
-pip3 install -v git+https://github.com/yamakox/panoramic_video.git
+pip3 install git+https://github.com/yamakox/panoramic_video.git
 ```
 
 ## Uninstall
@@ -17,10 +17,16 @@ pip3 uninstall panoramic_video
 ## Usage
 
 ```
-python3 -m panoramic_video [-h] [--crop LEFT UPPER RIGHT LOWER] [--seconds SECONDS]
-                           [--fps FPS] [--size WIDTH HEIGHT] [--bitrate BITRATE]
-                           [--verbose]
-                           image_file_name [video_file_name]
+panoramic_video [-h] [--crop LEFT UPPER RIGHT LOWER] [--seconds SECONDS]
+                     [--fps FPS] [--size WIDTH HEIGHT] [--bitrate BITRATE]
+                     [--verbose]
+                     image_file_name [video_file_name]
+```
+
+or
+
+```
+python3 -m panoramic_video ... above parameters ...
 ```
 
 |arguments |description |
