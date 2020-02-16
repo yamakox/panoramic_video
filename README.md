@@ -5,7 +5,7 @@ The video generator from panorama photograph image
 ## Install
 
 ```
-pip install -v https://github.com/yamakmox/panoramic_video.git
+pip3 install -v git+https://github.com/yamakox/panoramic_video.git
 ```
 
 ## Usage
