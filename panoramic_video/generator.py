@@ -11,13 +11,14 @@ def generate(image_file_name, video_file_name,
 	video_width, video_height = size
 	a0 = video_width / video_height
 	a1 = image.width / image.height
+	min_ratio = 2.0
 	if stdout:
 		print(f'           image : {image.width}x{image.height} (aspect ratio={a1:.4})')
 		print(f'           video : {video_width}x{video_height} (aspect ratio={a0:.4})')
-		print(f'     image/video : {a1/a0:.4} (must be >=3.000)')
-	if a1 / a0 < 3:
+		print(f'     image/video : {a1/a0:.4} (must be >={min_ratio:.4})')
+	if a1 / a0 < min_ratio:
 		raise Exception('Aspect ratio of image file is not enough to generate panorama video:'
-						f'{image.width}x{iamge.height}')
+						f'{image.width}x{image.height}')
 	thumb_width, thumb_height = video_width, int(image.height * video_width / image.width)
 	thumb = image.resize( (thumb_width, thumb_height), Image.LANCZOS )
 	body_height = video_height - thumb_height - border
