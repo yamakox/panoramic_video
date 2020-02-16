@@ -8,6 +8,12 @@ The video generator from panorama photograph image
 pip3 install -v git+https://github.com/yamakox/panoramic_video.git
 ```
 
+## Uninstall
+
+```
+pip3 uninstall panoramic_video
+```
+
 ## Usage
 
 ```
