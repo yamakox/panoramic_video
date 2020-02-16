@@ -38,7 +38,7 @@ def main():
 		fps=args.seconds,
 		size=args.size,
 		bitrate=args.bitrate,
-		stdout=True
+		stdout=args.verbose
 	)
 
 if __name__ == '__main__':
