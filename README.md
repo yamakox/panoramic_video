@@ -40,3 +40,14 @@ python3 -m panoramic_video ... above parameters ...
 |--size WIDTH HEIGHT   |The width and the height of the panorama video|
 |--bitrate BITRATE     |The video bitrate|
 |--verbose             |Verbose mode|
+
+## FFmpegFrameWriter Class Usage
+
+```
+    with FFmpegFrameWriter('output file name.mp4', fps=30, size=(1280, 720), bitrate='10240k', stdout=True) as writer:
+        # set frame data
+        for x in range( ... ):
+            # set frame data
+            writer.frame[0:720, 0:1280, 0:3] = ...
+            writer.add_frame()
+```
